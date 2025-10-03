@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #131936; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top {
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #131936;
+}
+.container {
+    margin: 0px 100px;
+}
+.top .element {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top .element .logo {
+    color: #FFF;
+}
+.top .element .nav ul {
+    list-style: none;
+    display: flex;
+}
+.top .element .nav ul li {
+    margin: 0px 10px;
+    /* padding: 10px 0px; */
+    /* position: relative; */
+}
+.top .element .nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    position: relative;
+    padding: 5px 0px;
+}
+.top .element .nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #FFF;
+    bottom: -3px;
+    transition: .5s ease-in;
+}
+.top .element .nav ul li a:hover::before {
+    width: 100%;
+}
+.top .element .nav ul .active::before {
+  width: 100%;  
+}
+.top .element .toggle {
+    display: none;
+}
+.bg {
+    background: #131936;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.bg .sos {
+    position: absolute;
+    margin-left: 35px;
+    background-color: #131936;
+    margin-top: 120px;
+    padding: 20px;
+    position: fixed;
+}
+.bg .sos ul {
+    list-style: none;
+}
+.bg .sos ul li {
+    margin: 10px 0px;
+    color: #FFF;
+}
+.bg .sos ul li i {
+    color: #FFF;
+    font-size: large;
+}
+.bg .text{
+    /* width: 100%; */
+    padding: 50px 0px;
+    color: #FFF;
+    margin-top: 100px;
+    position: absolute;
+}
+.bg .text span {
+    background-color: #FFF;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #131936;
+    text-transform: capitalize;
+}
+.bg .text h2 {
+    margin: 20px 0px 10px 0px;
+}
+.bg .text h4 {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.bg .text .lk ul{
+    display: flex;
+}
+.bg .text .lk ul li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+.bg .text .lk a {
+    background-color: #707070;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin: auto;
+    margin-right: 10px;
+    color: #FFF
+}
+.bg .text .lk #pt {
+    color: #131936;
+    background-color: #FFF;
+}
+.service {
+    width: 100%;
+    background-color: #131936;
+    /* padding: 50px 0px; */
+    box-sizing: content-box;
+}
+.service .pk {
+    background-color: #E5E5E5;
+    padding: 50px 0px;
+}
+.service .hd {
+    text-align: center;
+    color: #131936;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+.service .element {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 3fr));
+}
+.service .element .card {
+    width: 320px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #FFF;
+    margin: 10px auto;
+    transition: .3s ease-in;
+}
+.service .element .card:hover {
+    box-shadow: 1px 2px 10px #000;
+}
+.service .element .card a {
+    text-decoration: none;
+    color: #131936;
+}
+.service .element .card img {
+    width: 50px;
+    background-color: #131936
+}
+.service .element .card h3 {
+    margin: 10px 0px;
+}
+.service .element .card p {
+    margin: 10px 0px;
+    line-height: 1.5;
+}
+.service .element .card .dis a {
+    text-transform: capitalize;
+}
+.service .element .card .dis a:hover i {
+    margin-left: 20px;
+    transition: .3s ease-in;
+}
+.project {
+    padding: 30px 0px;
+    background-color: #131936;
+}
+.project .element {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.project .element .gp {
+    height: 50px;
+    display: flex;
+    text-transform: capitalize;
+}
+.project .element .gp img {
+    /* height: 50px; */
+    width: 50px;
+    background-color: #FFF;
+}
+.project .element .txt {
+    color: #FFF;
+    margin-left: 20px;
+}
+.fd {
+    width: 100%;
+    background-color: #E5E5E5;
+    padding: 50px 0px;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; */
+}
+.fd .hd {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+/* .fd .element {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 3fr));
+} */
+
+
+.fd .element {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            /* background-color: blue; */
+        }
+
+        .fd .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .fd .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 10px;
+            flex: 0 0 calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            padding: 15px;
+        }
+        .fd .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+/* .fd .element .card {
+    background-color: #FFF;
+    padding: 20px;
+    width: 350px;
+    margin: 10px auto;
+} */
+.fd .element .card .pf {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+.fd .element .card .pf img {
+    height: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.konnect {
+    width: 100%;
+    background-color: #131936;
+    padding: 50px 0px;
+}
+.konnect .element {
+    background-color: #FFF;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+}
+.konnect .element .lf {
+    padding: 20px 10px;
+    text-align: center;
+}
+.konnect .element .lf h3 {
+    text-transform: capitalize;
+}
+.konnect .element .lf .tik h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.konnect .element .lf .tik a {
+    background-color: #131936;
+    color: #FFF;
+    padding: 10px 60px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.konnect .element .pr {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.konnect .element .pr img {
+    height: 120px;
+    width: 160px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+/* tablet view */
+@media screen and (max-width: 1000px) {
+    .container {
+        margin: 0px 50px;
+    }
+    .top .element .nav {
+        display: none;
+    }
+    .top .element .toggle {
+        display: block;
+        color: #FFF;
+        font-size: 25px;
+    }
+    .bg {
+        padding-bottom: 50px;
+    }
+    .bg .sos {
+        bottom: 0;
+        width: 95%;
+        margin: auto;
+        padding: 5px;
+        opacity: 0.8;
+    }
+    .bg .sos ul {
+        display: flex;
+        width: auto;
+        justify-content: space-around;
+    }
+   
+    .fd .element .card {
+    flex: 0 0 calc(50% - 20px);
+    
+}
+}
+
+
+
+
+
+/* mobile view */
+
+@media screen and (max-width: 500px) {
+    
+    .container{
+        margin: 0px 10px;
+    }
+    .bg {
+        height: 40vh;
+    }
+    .bg .text {
+        margin-top: 20px;
+    }
+.bg .text h2 {
+    font-size: 18px;
+}
+.fd .element .card {
+    /* width: 280px; */
+    flex: 0 0 calc(100% - 20px);
+    
+}
+
+
+
+}
