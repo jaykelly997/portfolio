@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     /* background-color: #131936; */
+    /* font-family:SegoeUI, Segoe UI; */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -9,6 +10,10 @@
     width: 100%;
     padding: 20px 0px;
     background-color: #131936;
+    position: sticky;
+    /* opacity: 1.8; */
+    top: 0px;
+    z-index: 1;
 }
 .container {
     margin: 0px 100px;
@@ -167,8 +172,12 @@
     margin: 10px 0px;
     line-height: 1.5;
 }
+.service .element .card .dis {
+    align-items: center;
+}
 .service .element .card .dis a {
     text-transform: capitalize;
+    align-items: center;
 }
 .service .element .card .dis a:hover i {
     margin-left: 20px;
@@ -287,6 +296,7 @@
     background-color: #FFF;
     text-align: center;
     display: grid;
+    /* grid-template-columns: 1fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
 }
 .konnect .element .lf {
@@ -307,6 +317,9 @@
     text-decoration: none;
     font-weight: bold;
 }
+.konnect .element .lf .tik a:hover {
+    background-color: #131936aa;
+}
 .konnect .element .pr {
     text-align: center;
     padding: 10px 10px;
@@ -317,9 +330,45 @@
     width: 160px;
     margin-top: 10px;
 }
-
-
-
+.footer {
+    background-color: #000;
+    width: 100%;
+    padding: 50px 0px;
+}
+.footer .element {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer .element .card {
+    margin: 0px 10px;
+}
+.footer .element .card h4 {
+    color: #FFF;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.footer .element .card h3 {
+    color: #FFF;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.footer .element .card a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+.footer .element .card ul li i {
+    margin-right: 10px;
+}
+.footer .element .card ul li {
+    margin-bottom: 10px;
+}
+.footer .element .card a:hover {
+    color: #cf4a0cc9;
+}
+.footer .copy {
+    color: #FFF;
+}
 
 
 
@@ -337,6 +386,30 @@
     }
     .top .element .nav {
         display: none;
+        width: 0;
+        margin-top: 220px;
+        height: auto;
+        z-index: 1;
+        right: 0;
+        position: absolute;
+        transition: .5s ease-in;
+    }
+    .top .element .nav.active {
+        display: block;
+        background-color: #707070;
+        width: 50%;
+        opacity: 1.8;
+    }
+    /* .top .element .nav.active_box {
+        opacity: 1;
+        pointer-events: fill;
+        left: 0px;
+    } */
+    .top .element .nav ul {
+        display: block;
+    }
+    .top .element .nav ul li {
+        margin-bottom: 15px;
     }
     .top .element .toggle {
         display: block;
@@ -344,11 +417,12 @@
         font-size: 25px;
     }
     .bg {
+        height: 50vh;
         padding-bottom: 50px;
     }
     .bg .sos {
         bottom: 0;
-        width: 95%;
+        width: 100%;
         margin: auto;
         padding: 5px;
         opacity: 0.8;
